@@ -293,33 +293,93 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(style);
     }
     
-    // Add back-to-top button functionality
-    const addBackToTopButton = () => {
-        // Create the button element
-        const backToTopBtn = document.createElement('button');
-        backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-        backToTopBtn.className = 'back-to-top';
-        document.body.appendChild(backToTopBtn);
-        
-        // Show/hide based on scroll position
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
+    // Sayaç animasyonu
+    const statNumbers = document.querySelectorAll('.stat-box h3');
+    
+    // Sayfa yüklendiğinde stat-box görünür olduğunda
+    function animateNumbers() {
+        statNumbers.forEach(number => {
+            const target = parseInt(number.innerText);
+            const increment = target / 100;
+            let current = 0;
+            
+            const updateNumber = () => {
+                if (current < target) {
+                    current += increment;
+                    number.innerText = Math.ceil(current);
+                    setTimeout(updateNumber, 10);
+                } else {
+                    number.innerText = target;
+                }
+            };
+            
+            updateNumber();
+        });
+    }
+    
+    // IntersectionObserver ile görünürlük kontrolü yaparak animasyonu başlat
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Sadece bir kez çalışsın
+                if (!entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    animateNumbers();
+                }
+                observer.unobserve(entry.target);
             }
         });
-        
-        // Scroll to top on click with smooth animation
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    };
+    }, { threshold: 0.3 });
     
-    addBackToTopButton();
+    // Stats section'ı gözlemle
+    const statsSection = document.querySelector('.stats-wrapper');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+    
+    // Scroll ile ekranda görünür hale gelen elemanları animasyonla göster (AOS dışında)
+    const fadeElements = document.querySelectorAll('.news-card, .announcement-item, .link-card');
+    
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    fadeElements.forEach(element => {
+        // Başlangıç stilleri
+        element.style.opacity = 0;
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        scrollObserver.observe(element);
+    });
+    
+    // Back to top butonu
+    const backToTop = document.createElement('a');
+    backToTop.href = '#';
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    document.body.appendChild(backToTop);
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+    
+    backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
     
     // Add active state to navigation links based on scroll position
     const sections = document.querySelectorAll('section');

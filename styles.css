@@ -1792,4 +1792,24 @@ footer {
         gap: 10px;
         align-items: flex-start;
     }
+}
+
+/* AOS Animasyon Performans İyileştirmeleri */
+[data-aos] {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Animasyon Geçişleri */
+.stat-box, .news-card, .announcement-item, .link-card, .contact-info, .map, 
+.about-text, .about-image, .footer-logo, .footer-links, .footer-contact {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Hover Animasyonları */
+.stat-box:hover, .news-card:hover, .announcement-item:hover, .link-card:hover {
+    transform: translateY(-10px);
 } 
