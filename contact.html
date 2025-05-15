@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Katip Çelebi Anadolu İmam Hatip Lisesi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Okul Logosu" class="logo">
+                    <div class="school-info">
+                        <h1>Katip Çelebi Anadolu İmam Hatip Lisesi</h1>
+                        <p>İSTANBUL / ESENYURT</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="education.html">Eğitim</a></li>
+                        <li><a href="activities.html">Etkinlikler</a></li>
+                        <li><a href="announcements.html">Duyurular</a></li>
+                        <li><a href="contact.html" class="active">İletişim</a></li>
+                    </ul>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>İletişim</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Anasayfa</a> / <span>İletişim</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-details">
+                <div class="contact-info-block">
+                    <div class="section-header">
+                        <span class="section-subtitle">Bize Ulaşın</span>
+                        <h2>İletişim Bilgileri</h2>
+                    </div>
+                    <div class="contact-info-items">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Adres</h3>
+                                <p>İncirtepe Mah. 285. Sk. Pazar Yeri Blok No:6 Esenyurt / İstanbul</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3>Telefon</h3>
+                                <p>(212) 699 9957</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>E-posta</h3>
+                                <p><a href="mailto:info@esenyurtkatipcelebiaihl.meb.k12.tr">info@esenyurtkatipcelebiaihl.meb.k12.tr</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Çalışma Saatleri</h3>
+                                <p>Pazartesi - Cuma: 08:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links contact-social">
+                        <h3>Sosyal Medya Hesaplarımız</h3>
+                        <div>
+                            <a href="https://www.instagram.com/esenyurtkatipcelebi/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/KatipCelebiAihl" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/c/Katip%C3%87elebiA%C4%B0HL" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-block">
+                    <div class="contact-form-wrapper">
+                        <h3>Mesaj Gönderin</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Adınız Soyadınız</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-posta Adresiniz</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon Numaranız</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Konu</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mesajınız</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Konum</span>
+                <h2>Bize Nasıl Ulaşabilirsiniz?</h2>
+            </div>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.9981108017137!2d28.6720!3d41.0305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAyJzA5LjgiTiAyOMKwNDAnMTkuMiJF!5e0!3m2!1str!2str!4v1635789012345!5m2!1str!2str" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="transportation">
+                <h3>Ulaşım Bilgileri</h3>
+                <div class="transportation-options">
+                    <div class="transport-item">
+                        <i class="fas fa-bus"></i>
+                        <h4>Toplu Taşıma</h4>
+                        <p>145E, 146B, 76D ve 76E numaralı otobüsler ile İncirtepe durağında inebilirsiniz.</p>
+                    </div>
+                    <div class="transport-item">
+                        <i class="fas fa-subway"></i>
+                        <h4>Metro</h4>
+                        <p>Esenyurt Metro İstasyonu'ndan okula 15 dakikalık yürüme mesafesindedir.</p>
+                    </div>
+                    <div class="transport-item">
+                        <i class="fas fa-car"></i>
+                        <h4>Özel Araç</h4>
+                        <p>Okulumuzun çevresinde yeterli park alanı mevcuttur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Okul Logosu">
+                    <p>Katip Çelebi Anadolu İmam Hatip Lisesi</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Hızlı Erişim</h3>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="education.html">Eğitim</a></li>
+                        <li><a href="activities.html">Etkinlikler</a></li>
+                        <li><a href="announcements.html">Duyurular</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>İletişim</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> İncirtepe Mah. 285. Sk. No:6 Esenyurt / İstanbul</p>
+                    <p><i class="fas fa-phone-alt"></i> (212) 699 9957</p>
+                    <p><i class="fas fa-envelope"></i> info@esenyurtkatipcelebiaihl.meb.k12.tr</p>
+                    <div class="footer-social">
+                        <p><i class="fas fa-globe"></i> Sosyal Medya:</p>
+                        <div class="footer-social-icons">
+                            <a href="https://www.instagram.com/esenyurtkatipcelebi/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/KatipCelebiAihl" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/c/Katip%C3%87elebiA%C4%B0HL" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Katip Çelebi Anadolu İmam Hatip Lisesi - Tüm Hakları Saklıdır</p>
+                <p>Gizlilik, Kullanım ve Telif Hakları bildiriminde belirtilen kurallar çerçevesinde hizmet sunulmaktadır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                // In a real application, you would send this data to a server
+                alert('Mesajınız gönderildi. En kısa sürede size dönüş yapılacaktır.');
+                this.reset();
+            } else {
+                alert('Lütfen tüm gerekli alanları doldurunuz.');
+            }
+        });
+    </script>
+</body>
+</html> 

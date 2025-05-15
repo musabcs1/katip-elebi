@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyurular - Katip Çelebi Anadolu İmam Hatip Lisesi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Okul Logosu" class="logo">
+                    <div class="school-info">
+                        <h1>Katip Çelebi Anadolu İmam Hatip Lisesi</h1>
+                        <p>İSTANBUL / ESENYURT</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="education.html">Eğitim</a></li>
+                        <li><a href="activities.html">Etkinlikler</a></li>
+                        <li><a href="announcements.html" class="active">Duyurular</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Duyurular</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Anasayfa</a> / <span>Duyurular</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="announcements-page">
+        <div class="container">
+            <div class="filter-container">
+                <div class="search-box">
+                    <input type="text" id="searchAnnouncement" placeholder="Duyuru ara...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="exam">Sınavlar</button>
+                    <button class="filter-btn" data-filter="academic">Akademik</button>
+                    <button class="filter-btn" data-filter="event">Etkinlikler</button>
+                    <button class="filter-btn" data-filter="general">Genel</button>
+                </div>
+            </div>
+
+            <div class="announcements-list">
+                <div class="announcement-card" data-category="academic">
+                    <div class="announcement-date">
+                        <span class="day">23</span>
+                        <span class="month">Eki</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-category academic">Akademik</div>
+                        <h3>2024/2025 Eğitim-Öğretim Yılı 2. Dönem 2. Sınav Takvimi</h3>
+                        <p>İkinci dönem sınav programı yayınlanmıştır. Tüm öğrencilerimize başarılar dileriz. Sınav programı için detaylara tıklayınız.</p>
+                        <div class="announcement-footer">
+                            <span class="announcement-time"><i class="far fa-clock"></i> 14:30</span>
+                            <a href="#" class="btn-outline btn-sm">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card" data-category="general">
+                    <div class="announcement-date">
+                        <span class="day">15</span>
+                        <span class="month">Eki</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-category general">Genel</div>
+                        <h3>2024/2025 Eğitim-Öğretim Yılı 2. Dönem Veli Toplantısı</h3>
+                        <p>Veli toplantımız 20 Ekim Pazar günü saat 14:00'da okulumuzda gerçekleştirilecektir. Tüm velilerimizin katılımını önemle rica ederiz.</p>
+                        <div class="announcement-footer">
+                            <span class="announcement-time"><i class="far fa-clock"></i> 10:15</span>
+                            <a href="#" class="btn-outline btn-sm">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card" data-category="exam">
+                    <div class="announcement-date">
+                        <span class="day">10</span>
+                        <span class="month">Eki</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-category exam">Sınavlar</div>
+                        <h3>DİN-ÖĞDERİ Kur'an ve Hafızlık Yarışması</h3>
+                        <p>DİN-ÖĞDERİ tarafından düzenlenen Kur'an-ı Kerim Okuma ve Hafızlık Yarışmasının okul elemelerinin tarihleri açıklanmıştır.</p>
+                        <div class="announcement-footer">
+                            <span class="announcement-time"><i class="far fa-clock"></i> 09:45</span>
+                            <a href="#" class="btn-outline btn-sm">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card" data-category="event">
+                    <div class="announcement-date">
+                        <span class="day">05</span>
+                        <span class="month">Eki</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-category event">Etkinlikler</div>
+                        <h3>Mevlid-i Nebi Haftası Etkinlikleri</h3>
+                        <p>Mevlid-i Nebi Haftası kapsamında okulumuzda düzenlenecek etkinlikler programı açıklanmıştır. Tüm öğrencilerimizin katılımı zorunludur.</p>
+                        <div class="announcement-footer">
+                            <span class="announcement-time"><i class="far fa-clock"></i> 11:20</span>
+                            <a href="#" class="btn-outline btn-sm">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card" data-category="academic">
+                    <div class="announcement-date">
+                        <span class="day">01</span>
+                        <span class="month">Eki</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-category academic">Akademik</div>
+                        <h3>2024-2025 Eğitim Öğretim Yılı Ders Programları</h3>
+                        <p>2024-2025 Eğitim Öğretim yılı ders programları açıklanmıştır. Öğrencilerimiz sınıf rehber öğretmenlerinden ders programlarını alabilirler.</p>
+                        <div class="announcement-footer">
+                            <span class="announcement-time"><i class="far fa-clock"></i> 16:45</span>
+                            <a href="#" class="btn-outline btn-sm">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card" data-category="general">
+                    <div class="announcement-date">
+                        <span class="day">28</span>
+                        <span class="month">Eyl</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-category general">Genel</div>
+                        <h3>Okul Kütüphanesi Çalışma Saatleri</h3>
+                        <p>Okul kütüphanemiz her gün 08:30-16:30 saatleri arasında öğrencilerimizin kullanımına açık olacaktır. Kütüphane kurallarına uyulması gerekmektedir.</p>
+                        <div class="announcement-footer">
+                            <span class="announcement-time"><i class="far fa-clock"></i> 13:10</span>
+                            <a href="#" class="btn-outline btn-sm">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card" data-category="exam">
+                    <div class="announcement-date">
+                        <span class="day">25</span>
+                        <span class="month">Eyl</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-category exam">Sınavlar</div>
+                        <h3>TÜBİTAK Bilim Proje Yarışması Başvuruları</h3>
+                        <p>TÜBİTAK 2025 Ortaöğretim Öğrencileri Araştırma Projeleri Yarışması başvuruları başlamıştır. Son başvuru tarihi 15 Kasım 2024'tür.</p>
+                        <div class="announcement-footer">
+                            <span class="announcement-time"><i class="far fa-clock"></i> 09:30</span>
+                            <a href="#" class="btn-outline btn-sm">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card" data-category="event">
+                    <div class="announcement-date">
+                        <span class="day">20</span>
+                        <span class="month">Eyl</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-category event">Etkinlikler</div>
+                        <h3>Okul Spor Kulübü Kayıtları</h3>
+                        <p>Okulumuzun futbol, basketbol, voleybol ve masa tenisi branşlarında okul takımlarına katılmak isteyen öğrenciler için seçmeler 25-30 Eylül tarihleri arasında yapılacaktır.</p>
+                        <div class="announcement-footer">
+                            <span class="announcement-time"><i class="far fa-clock"></i> 14:20</span>
+                            <a href="#" class="btn-outline btn-sm">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next">İleri <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Okul Logosu">
+                    <p>Katip Çelebi Anadolu İmam Hatip Lisesi</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Hızlı Erişim</h3>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="education.html">Eğitim</a></li>
+                        <li><a href="activities.html">Etkinlikler</a></li>
+                        <li><a href="announcements.html">Duyurular</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>İletişim</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> İncirtepe Mah. 285. Sk. No:6 Esenyurt / İstanbul</p>
+                    <p><i class="fas fa-phone-alt"></i> (212) 699 9957</p>
+                    <p><i class="fas fa-envelope"></i> info@esenyurtkatipcelebiaihl.meb.k12.tr</p>
+                    <div class="footer-social">
+                        <p><i class="fas fa-globe"></i> Sosyal Medya:</p>
+                        <div class="footer-social-icons">
+                            <a href="https://www.instagram.com/esenyurtkatipcelebi/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/KatipCelebiAihl" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/c/Katip%C3%87elebiA%C4%B0HL" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Katip Çelebi Anadolu İmam Hatip Lisesi - Tüm Hakları Saklıdır</p>
+                <p>Gizlilik, Kullanım ve Telif Hakları bildiriminde belirtilen kurallar çerçevesinde hizmet sunulmaktadır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Announcements filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const announcementCards = document.querySelectorAll('.announcement-card');
+            const searchInput = document.getElementById('searchAnnouncement');
+            
+            // Filter items based on category
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    // Show/hide items based on filter
+                    announcementCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('keyup', function() {
+                const searchValue = this.value.toLowerCase();
+                
+                announcementCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const content = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchValue) || content.includes(searchValue)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
