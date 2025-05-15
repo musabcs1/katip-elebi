@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 scrollObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -150px 0px' });
     
     fadeElements.forEach(element => {
         // Başlangıç stilleri
