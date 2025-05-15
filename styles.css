@@ -126,7 +126,7 @@ header {
 
 header.sticky {
     padding: 8px 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 10 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -1675,7 +1675,7 @@ footer {
 }
 
 .announcement-category.event {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
 }
 
 .announcement-category.general {
@@ -1812,4 +1812,380 @@ footer {
 /* Hover Animasyonları */
 .stat-box:hover, .news-card:hover, .announcement-item:hover, .link-card:hover {
     transform: translateY(-10px);
+}
+
+/* Activities Page Styles */
+.activities-intro-section {
+    background-color: var(--white-color);
+    padding: 70px 0;
+}
+
+.activities-content {
+    margin-top: 30px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.activity-box {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.activity-box:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.activity-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--white-color);
+    font-size: 24px;
+    transition: var(--transition);
+    will-change: transform;
+}
+
+.activity-box:hover .activity-icon {
+    transform: rotateY(180deg);
+}
+
+.activity-box h3 {
+    color: var(--dark-color);
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.activity-box p {
+    color: var(--light-text);
+    font-size: 14px;
+}
+
+.activities-gallery {
+    margin-top: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 250px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    will-change: transform;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    color: var(--white-color);
+    transition: var(--transition);
+}
+
+.gallery-overlay h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.gallery-overlay p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.religious-activities {
+    margin-top: 30px;
+}
+
+.activity-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.activity-card {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.activity-card-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--white-color);
+    font-size: 30px;
+    transition: var(--transition);
+    will-change: transform;
+}
+
+.activity-card h3 {
+    color: var(--dark-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.activity-card p {
+    color: var(--light-text);
+    font-size: 15px;
+}
+
+.social-activities-content {
+    margin-top: 30px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    clear: both;
+    margin-bottom: 40px;
+}
+
+.timeline-item:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline-item:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.timeline-date {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    right: -140px;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: -140px;
+}
+
+.timeline-content {
+    background: var(--white-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+
+.timeline-content h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.timeline-content p {
+    color: var(--light-text);
+    font-size: 15px;
+}
+
+.calendar-content {
+    margin-top: 30px;
+}
+
+.calendar-events {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.event-card {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    will-change: transform;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.event-date {
+    background: var(--gradient-primary);
+    color: var(--white-color);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.event-day {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-month {
+    display: block;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.event-details {
+    padding: 20px;
+}
+
+.event-details h3 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.event-details p {
+    color: var(--light-text);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.event-details i {
+    color: var(--primary-color);
+    margin-right: 8px;
+    width: 18px;
+}
+
+@media (max-width: 992px) {
+    .activities-grid, .gallery-grid, .calendar-events {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .activity-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        left: -30px;
+        top: 10px;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .activities-grid, .gallery-grid, .activity-cards, .calendar-events {
+        grid-template-columns: 1fr;
+    }
 } 
