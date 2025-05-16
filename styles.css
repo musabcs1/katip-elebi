@@ -60,6 +60,11 @@ section {
     padding: 0 20px;
 }
 
+header .container {
+    max-width: 100%;
+    padding-left: 0;
+}
+
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -131,46 +136,67 @@ header.sticky {
 
 .header-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    background-color: var(--primary-color);
+    padding: 10px 25px 10px 20px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     margin-right: 15px;
 }
 
+.school-info {
+    flex-grow: 1;
+    min-width: 0;
+}
+
 .school-info h1 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    font-size: 1.4rem;
+    color: var(--white-color);
     margin-bottom: 5px;
+    line-height: 1.2;
 }
 
 .school-info p {
     font-size: 0.9rem;
-    color: var(--light-text);
+    color: rgba(255, 255, 255, 0.9);
     letter-spacing: 1px;
+    line-height: 1.2;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    padding-right: 20px;
 }
 
 .main-nav {
     display: flex;
+    margin-left: 0;
 }
 
 .main-nav li {
     margin-right: 25px;
+}
+
+.main-nav li:last-child {
+    margin-right: 0;
 }
 
 .main-nav a {
@@ -285,6 +311,11 @@ nav {
 
 .slide-content .btn {
     animation: fadeInUp 1s ease 0.6s both;
+}
+
+.slide-content .container {
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 /* Stats Section */
@@ -926,12 +957,13 @@ footer {
     }
     
     .logo-container {
-        margin-bottom: 10px;
+        padding: 8px 20px 8px 15px;
     }
     
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
+        margin-right: 12px;
     }
     
     .about-content {
@@ -1005,6 +1037,22 @@ footer {
         font-size: 14px;
         right: auto;
     }
+    
+    .school-info h1 {
+        font-size: 1.4rem;
+    }
+    
+    .main-nav {
+        margin-left: 15px;
+    }
+    
+    nav {
+        padding-right: 10px;
+    }
+    
+    .main-nav li {
+        margin-right: 18px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1015,8 +1063,15 @@ footer {
     }
     
     .logo-container {
-        margin-bottom: 0;
-        max-width: 75%;
+        padding: 6px 15px 6px 10px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
     }
     
     .school-info h1 {
@@ -1028,6 +1083,7 @@ footer {
     
     .main-nav {
         display: none;
+        margin-left: 0;
     }
     
     .mobile-menu-btn {
@@ -1087,6 +1143,7 @@ footer {
         height: auto;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         z-index: 99;
+        padding-right: 0;
     }
     
     .main-nav.show li {
@@ -1208,9 +1265,8 @@ footer {
         padding: 0 10px;
     }
     
-    .logo {
-        width: 50px;
-        height: 50px;
+    .logo-container {
+        padding: 5px 15px 5px 10px;
     }
     
     .btn {
@@ -1313,6 +1369,12 @@ footer {
     
     .activity-icon, .activity-card-icon {
         margin-bottom: 15px;
+    }
+    
+    .logo {
+        width: 45px;
+        height: 45px;
+        margin-right: 8px;
     }
 }
 
