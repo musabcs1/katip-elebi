@@ -584,4 +584,39 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Mobile optimizations loaded');
         });
     }
+    
+    // Dark Mode Toggle
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    if (darkModeToggle) {
+        // Check for saved theme preference or use device preference
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const savedTheme = localStorage.getItem('theme');
+        
+        // Apply saved theme or device preference
+        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            darkModeToggle.querySelector('i').className = 'fas fa-sun';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            darkModeToggle.querySelector('i').className = 'fas fa-moon';
+        }
+        
+        // Toggle theme when button is clicked
+        darkModeToggle.addEventListener('click', function() {
+            let currentTheme = document.documentElement.getAttribute('data-theme');
+            let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update icon
+            this.querySelector('i').className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            
+            // Add transition class for smooth color changes
+            document.body.classList.add('theme-transition');
+            setTimeout(() => {
+                document.body.classList.remove('theme-transition');
+            }, 1000);
+        });
+    }
 }); 

@@ -17,6 +17,173 @@
     --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
 }
 
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --primary-color: #00b0ff;
+    --primary-dark: #0091ea;
+    --secondary-color: #ffe082;
+    --secondary-dark: #ffd54f;
+    --accent-color: #e0e0e0;
+    --dark-color: #f5f5f5;
+    --text-color: #e0e0e0;
+    --light-text: #b0bec5;
+    --light-color: #121212;
+    --gray-color: #757575;
+    --white-color: #1e1e1e;
+    --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    --box-shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.3);
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    margin-right: 15px;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Dark Mode Specific Styles */
+[data-theme="dark"] body {
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+[data-theme="dark"] .slide-content h2,
+[data-theme="dark"] .slide-content p{
+    color: var(--dark-color);
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] footer{
+    background-color: var(--white-color);
+}
+
+[data-theme="dark"] .announcements {
+    background: #121212; /* Make it black to match dark theme */
+    color: var(--white-color);
+}
+
+[data-theme="dark"] .announcements .section-header.light span.section-subtitle {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .announcements .section-header.light h2 {
+    color: white !important;
+}
+
+[data-theme="dark"] .main-nav a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .news-card,
+[data-theme="dark"] .activity-box,
+[data-theme="dark"] .activity-card,
+[data-theme="dark"] .event-card,
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .mv-card,
+[data-theme="dark"] .team-member,
+[data-theme="dark"] .facility-card,
+[data-theme="dark"] .contact-wrapper,
+[data-theme="dark"] .announcement-card,
+[data-theme="dark"] .announcement-content {
+    background-color: #252525;
+}
+
+[data-theme="dark"] .link-card {
+    background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .section-header h2,
+[data-theme="dark"] .news-content h3,
+[data-theme="dark"] .activity-box h3,
+[data-theme="dark"] .activity-card h3,
+[data-theme="dark"] .timeline-content h3,
+[data-theme="dark"] .event-details h3,
+[data-theme="dark"] .mv-card h2,
+[data-theme="dark"] .member-info h3,
+[data-theme="dark"] .facility-card h3,
+[data-theme="dark"] .announcement-content h3 {
+    color: var(--dark-color);
+}
+
+[data-theme="dark"] .stats-wrapper,
+[data-theme="dark"] .about,
+[data-theme="dark"] .quick-links,
+[data-theme="dark"] .activities-intro-section,
+[data-theme="dark"] .management,
+[data-theme="dark"] .contact-page {
+    background-color: #121212;
+}
+
+[data-theme="dark"] .news-events,
+[data-theme="dark"] .contact,
+[data-theme="dark"] .mission-vision,
+[data-theme="dark"] .facilities {
+    background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background-color: #2c2c2c;
+    border-color: #444;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .stat-box {
+    background-color: #252525;
+}
+
+[data-theme="dark"] .stat-box:not(:last-child)::after {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .footer-links ul li a,
+[data-theme="dark"] .footer-contact p,
+[data-theme="dark"] .footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Dark Mode Transitions */
+body, header, .main-nav a, .news-card, .activity-box, .activity-card, 
+.event-card, .timeline-content, .mv-card, .team-member, .facility-card, 
+.contact-wrapper, .announcement-card, .link-card, .section-header h2, 
+.news-content h3, .activity-box h3, .activity-card h3, .timeline-content h3, 
+.event-details h3, .mv-card h2, .member-info h3, .facility-card h3, 
+.stats-wrapper, .about, .quick-links, .activities-intro-section, 
+.management, .contact-page, .news-events, .contact, .mission-vision, 
+.facilities, .form-group input, .form-group textarea, .stat-box {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Theme transition class for smooth color changes */
+.theme-transition * {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease !important;
+}
+
+/* JavaScript to toggle dark mode:
+document.querySelector('.dark-mode-toggle').addEventListener('click', function() {
+    document.documentElement.setAttribute('data-theme', 
+        document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+    );
+});
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -295,7 +462,7 @@ nav {
 .slide-content h2 {
     font-size: 3rem;
     margin-bottom: 15px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
     animation: fadeInDown 1s ease;
 }
 
@@ -422,6 +589,10 @@ nav {
 
 .section-header.light .section-subtitle {
     background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white-color);
+}
+
+[data-theme="dark"] .section-header.light .section-subtitle {
     color: var(--white-color);
 }
 
@@ -1220,6 +1391,13 @@ footer {
     .gallery-overlay p {
         font-size: 13px;
     }
+    
+    .dark-mode-toggle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+        margin-right: 10px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1311,6 +1489,13 @@ footer {
         width: 70px;
         font-size: 13px;
     }
+    
+    .dark-mode-toggle {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+        margin-right: 8px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -1375,6 +1560,13 @@ footer {
         width: 45px;
         height: 45px;
         margin-right: 8px;
+    }
+    
+    .dark-mode-toggle {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        margin-right: 6px;
     }
 }
 
