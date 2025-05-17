@@ -1,6 +1,24 @@
 // Main JavaScript for Katip Çelebi Anadolu İmam Hatip Lisesi Website
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Apply dark mode settings as early as possible
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const savedTheme = localStorage.getItem('theme');
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    
+    // Apply saved theme or device preference
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (darkModeToggle) {
+            darkModeToggle.querySelector('i').className = 'fas fa-sun';
+        }
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (darkModeToggle) {
+            darkModeToggle.querySelector('i').className = 'fas fa-moon';
+        }
+    }
+    
     // Mobile device detection
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
     
@@ -585,22 +603,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Dark Mode Toggle
-    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    // Dark Mode Toggle click handler
     if (darkModeToggle) {
-        // Check for saved theme preference or use device preference
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        const savedTheme = localStorage.getItem('theme');
-        
-        // Apply saved theme or device preference
-        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            darkModeToggle.querySelector('i').className = 'fas fa-sun';
-        } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            darkModeToggle.querySelector('i').className = 'fas fa-moon';
-        }
-        
         // Toggle theme when button is clicked
         darkModeToggle.addEventListener('click', function() {
             let currentTheme = document.documentElement.getAttribute('data-theme');

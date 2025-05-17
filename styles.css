@@ -118,6 +118,8 @@
 [data-theme="dark"] .mv-card h2,
 [data-theme="dark"] .member-info h3,
 [data-theme="dark"] .facility-card h3,
+[data-theme="dark"] .gallery-overlay h3,
+[data-theme="dark"] .gallery-overlay p,
 [data-theme="dark"] .announcement-content h3 {
     color: var(--dark-color);
 }
